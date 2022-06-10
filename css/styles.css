@@ -1,0 +1,140 @@
+ /* 1. variables
+    2. class-utility  for reset default
+    3. Header
+    4. Main
+    5. section 2-4 
+    6. Footer */
+
+ /* main-text: rgba(33, 33, 33, 1) #212121
+    second-text: rgba(117, 117, 117, 1) #757575
+    footer-text: rgba(255, 255, 255, 0.6)
+    accent: rgba(33, 150, 243, 1) #2196F3
+    main-bg: rgba(47, 48, 58, 1) #2F303A
+    second-bg: rgba(236, 236, 236, 1) #ECECEC
+    third-bg: #F5F4FA
+    white: rgba(255, 255, 255, 1) #FFFFFF
+    black: rgba(0, 0, 0, 1); #000000
+   */
+
+ /* 1. variables */
+ :root {
+   --main-text: #212121;
+   --second-text: #757575;
+   --footer-text: rgba(255, 255, 255, 0.6);
+   --accent: #2196F3;
+   --main-bg: #2F303A;
+   --second-bg: #ECECEC;
+   --third-bg: #F5F4FA;
+   --white: #ffffff;
+   --black: #000000;
+ }
+
+ body {
+   font-family: 'Roboto', sans-serif;
+   color: var(--main-text);
+   background-color: var(--white);
+ }
+
+ /* 2. class-utility  for reset default */
+
+ .link {
+   text-decoration: none;
+ }
+
+ .list {
+   list-style: none;
+ }
+
+ /* 3. Header */
+
+ .logo {
+   color: var(--black);
+   font-family: 'Raleway', sans-serif;
+ }
+
+ .logo-accent {
+   color: var(--accent);
+ }
+
+ .nav-page {
+   color: var(--main-text);
+ }
+
+ .nav-site .active.nav-page {
+   color: var(--accent);
+ }
+
+ .contact-header {
+   color: var(--second-text);
+ }
+
+ .nav-page:hover,
+ .nav-page:focus,
+ .contact-header:hover,
+ .contact-header:focus {
+   color: var(--accent);
+ }
+
+
+ /* .nav {} */
+ /* .contact {} */
+
+ /* 4. Main */
+ .hero {
+   background-color: var(--main-bg);
+ }
+
+ .hero-title {
+   color: var(--white);
+ }
+
+ .btn {
+   color: var(--white);
+   background-color: var(--accent);
+ }
+
+ /* 5. section 2-4 */
+ /* .section {}
+
+ .section-title {}
+
+ .benefits {}
+
+ .benefits-title {} */
+
+ .benefits-text {
+   color: var(--second-text);
+ }
+
+ /* .team {}
+
+ .team-name {} */
+
+ .team-post {
+   color: var(--second-text);
+ }
+
+ /* 6. Footer */
+
+ .contact-address {
+   color: var(--white);
+ }
+
+ .contact-footer {
+   color: var(--footer-text);
+ }
+
+ /* 7. portfolio page */
+ .theme {
+   color: var(--main-text);
+ }
+
+ /* .work {} */
+ /* .work-title {} */
+
+ .work-theme {
+   counter-reset: var(--second-text);
+   font-family: 'Roboto', sans-serif;
+ }
+
+ /* .exampl {} */
