@@ -14,11 +14,17 @@
     third-bg: #F5F4FA
     white: rgba(255, 255, 255, 1) #FFFFFF
     black: rgba(0, 0, 0, 1); #000000
-   */
+    font-weight: 400, 500, 700, 900
+    font-size: 14, 16, 18, 36, 26, 44
+    line-height: 1.143, 1.167, 1.188, 1.192, 1.364, 1.625, 1.714, 1.875,
+   
+   
+   
+    */
 
  /* 1. variables */
  :root {
-   --main-text: #212121;
+   --main-text: rgb(33, 33, 33);
    --second-text: #757575;
    --footer-text: rgba(255, 255, 255, 0.6);
    --accent: #2196F3;
@@ -27,12 +33,21 @@
    --third-bg: #F5F4FA;
    --white: #ffffff;
    --black: #000000;
+   --normal: 400;
+   --normal-plus: 500;
+   --bold: 700;
+   --bold-plus: 900;
  }
 
  body {
+   /* background-color: var(--white); */
+
    font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   font-weight: var(--normal);
+   line-height: 1.143;
+   letter-spacing: 0.03em;
    color: var(--main-text);
-   background-color: var(--white);
  }
 
  /* 2. class-utility  for reset default */
@@ -48,19 +63,26 @@
  /* 3. Header */
 
  .logo {
-   color: var(--black);
    font-family: 'Raleway', sans-serif;
+   font-size: 1.625em;
+   font-weight: var(--bold);
+   line-height: 1.192;
+   color: var(--black);
  }
 
  .logo-accent {
    color: var(--accent);
  }
 
- .nav-page {
+ .nav-page,
+ .contact-header {
+   font-size: 0.875em;
+   font-weight: var(--normal-plus);
+   letter-spacing: 0.02em;
    color: var(--main-text);
  }
 
- .nav-site .active.nav-page {
+ .active.nav-page {
    color: var(--accent);
  }
 
@@ -71,10 +93,27 @@
  .nav-page:hover,
  .nav-page:focus,
  .contact-header:hover,
- .contact-header:focus {
+ .contact-header:focus,
+ .footer .contact-address:hover,
+ .footer .contact-address:focus,
+ .footer .contact-footer:hover,
+ .footer .contact-footer:focus {
    color: var(--accent);
  }
 
+ .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
 
  /* .nav {} */
  /* .contact {} */
@@ -82,33 +121,65 @@
  /* 4. Main */
  .hero {
    background-color: var(--main-bg);
+
+   text-align: center;
+   letter-spacing: 0.06em;
+   color: var(--white);
  }
 
  .hero-title {
-   color: var(--white);
+   font-size: 2.75em;
+   font-weight: var(--bold-plus);
+   line-height: 1.364;
+   text-transform: uppercase;
  }
 
  .btn {
-   color: var(--white);
    background-color: var(--accent);
+   cursor: pointer;
+
+   font-family: inherit;
+   font-size: 1em;
+   font-weight: var(--bold);
+   line-height: 1.875;
+   color: var(--white);
+   letter-spacing: 0.06em;
  }
 
  /* 5. section 2-4 */
- /* .section {}
 
- .section-title {}
+ .section {
+   text-align: center;
+ }
 
- .benefits {}
+ .section-title {
+   font-size: 2.25em;
+   font-weight: var(--bold);
+   line-height: 1.167;
+ }
 
- .benefits-title {} */
+ /* .benefits {} */
+
+ .benefits-title {
+   font-size: 0.875em;
+   font-weight: var(--bold);
+   text-transform: uppercase;
+ }
 
  .benefits-text {
+   font-size: 0.875em;
+   line-height: 1.714;
    color: var(--second-text);
  }
 
- /* .team {}
+ .team {
+   line-height: 1.188;
+ }
 
- .team-name {} */
+ .team-name {
+   font-size: 1em;
+   font-weight: var(--normal-plus);
+ }
 
  .team-post {
    color: var(--second-text);
@@ -116,25 +187,59 @@
 
  /* 6. Footer */
 
- .contact-address {
+ .footer {
+   background-color: var(--main-bg);
+ }
+
+ .footer .link {
    color: var(--white);
  }
 
- .contact-footer {
+ .italic {
+   font-style: normal;
+   line-height: 1.714;
+ }
+
+ .contact-address {
+   font-size: 0.875em;
+ }
+
+
+ .contact-footer.link {
+   font-size: 0.875em;
    color: var(--footer-text);
  }
 
  /* 7. portfolio page */
- .theme {
+ .btn-theme {
+   cursor: pointer;
+
+   font-family: inherit;
+   font-size: 1em;
+   font-weight: var(--normal-plus);
+   line-height: 1.625;
+   letter-spacing: 0.03em;
    color: var(--main-text);
+
+ }
+
+ .btn-theme:hover,
+ .btn-theme:focus {
+   color: var(--white);
+   background-color: var(--accent);
  }
 
  /* .work {} */
- /* .work-title {} */
+ .work-title {
+   font-size: 1.125em;
+   line-height: 2;
+   letter-spacing: 0.06em;
+ }
 
  .work-theme {
-   counter-reset: var(--second-text);
-   font-family: 'Roboto', sans-serif;
+   font-family: inherit;
+   line-height: 1.875;
+   color: var(--second-text);
  }
 
  /* .exampl {} */
